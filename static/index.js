@@ -208,6 +208,7 @@ function reset()
         email_object.classList.add('fade-in')
         emails_list_object.append(email_object)
     }
+    deleted_emails = []
 }
 
 /*This function is a switch that shows/hides the email input field 
