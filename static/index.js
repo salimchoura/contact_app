@@ -69,7 +69,7 @@ async function showContactInfo(myEvent) {
     selected_contact = myEvent.srcElement
     selected_contact.classList.add('selected')
 
-
+    email_box.value = ''
     // retrieving the name and id from the selected element 
     let name = myEvent.srcElement.innerText.split(' ')
     let request_data = myEvent.srcElement.getAttribute('data-info')
@@ -242,20 +242,22 @@ async function updateContact()
         return
     }
     // adding an email when necessary
+    console.log(emailChange)
     if (emailChange)
     {
-        let return_value = addEmail(email)
+        let return_value = await addEmail(email)
+        console.log(return_value)
         if (!return_value)
             return;
     }
-
     // changing the name when necessary
     if (first_name_change || last_name_change)
     {
         change_name(first_name,last_name)
     }
 
-    deleteOldEmails()
+    if (deleted_emails.length != 0)
+        deleteOldEmails()
 }
 
 /*This function adds a new email to the currently selected contact */
