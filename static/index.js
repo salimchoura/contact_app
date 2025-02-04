@@ -143,8 +143,6 @@ async function addStyle()
         details.classList.remove('fade-in')
         buttons.classList.remove('fade-in')
     }, 300);
-
-    
 }
 
 
@@ -183,8 +181,10 @@ async function deleteSelectedContact() {
         }
     })
 
-    document.getElementById('details').style.display = 'none';
-    document.getElementById('Home').style.display = 'block';  
+    details.style.display = 'none';
+    buttons.style.display = 'none';
+    home.style.display = 'block';
+    home.classList.add('fade-in')
 
     selected_contact.classList.add("fade-out"); // Apply fade-out class
     setTimeout(() => 
