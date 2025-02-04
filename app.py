@@ -92,7 +92,7 @@ def add_email():
         return jsonify({'message': 'Email added successfully','id':new_email.id}), 200
     except:
         db.session.rollback()
-        return jsonify({'error': 'This email is in use'}), 402
+        return jsonify({'error': 'This email is in use'}), 409
 
 # adds a contact with the corresponding name and email
 @app.route('/add_contact', methods=['POST'])

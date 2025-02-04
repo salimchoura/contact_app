@@ -268,7 +268,6 @@ async function addEmail(email)
             return;
         }
     id = selected_contact.getAttribute('data-info')
-
     response = await fetch('/add_email', {
         method: 'POST',
         headers: {
@@ -276,13 +275,12 @@ async function addEmail(email)
         },
         body:JSON.stringify({"email":  `${email}`,'contact_id': `${id}`})
     })
-
     data = await response.json()
 
     // error handling
-    if (response.status == 402)
+    if (response.status == 409)
     {
-        window.alert(response.message);
+        window.alert(data.error);
         return 0;
     }
 
@@ -308,6 +306,7 @@ async function addEmail(email)
     setTimeout(()=>{
         email_container.classList.remove('fade-in')
     },300)
+    email_box.value = ''
     return 1;
 }
 
