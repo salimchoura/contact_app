@@ -339,6 +339,14 @@ async function change_name(first_name,last_name) {
         },        
         body:JSON.stringify({"first_name":  `${first_name}`,"last_name": `${last_name}`})}
     )
+
+    
+    selected_contact.style.opacity = 0
+    selected_contact.innerText = first_name + " " + last_name
+    selected_contact.classList.remove('fade-in')
+    setTimeout(() => {
+        selected_contact.classList.add('fade-in')
+    }, 300);
 }
 
 /* This function is called when the minus button next to an email
