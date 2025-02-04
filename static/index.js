@@ -325,6 +325,7 @@ async function deleteOldEmails()
         })
     }
     deleted_emails = []
+    window.alert('Contact updated successfully')
 }
 
 /* This function takes the new first and last name and updates the record
