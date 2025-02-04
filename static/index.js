@@ -213,15 +213,25 @@ function reset()
 /*This function is a switch that shows/hides the email input field 
 * if the user wants to add an email or changed their mind about adding an 
 * email and wants to remove the new email field  */
-function ToggleInputField()
+function ToggleInputField(num)
 {
     newEmailElement = document.getElementById('form-group-3')
-    newSetting = newEmailElement.style.display == 'none' ? 'block':'none';
-    newEmailElement.style.display = newSetting; 
-    newEmailElement.classList.add('fade-in')
-    setTimeout(() => {
-        newEmailElement.classList.remove('fade-in')
-    }, 300);
+    if (num ==1 )
+    {
+        newEmailElement.style.display = 'block'
+        newEmailElement.classList.add('fade-in')
+        setTimeout(() => {
+            newEmailElement.classList.remove('fade-in')
+        }, 300);
+    }
+    else
+    {
+        newEmailElement.classList.add('fade-out')
+        setTimeout(() => {
+            newEmailElement.classList.remove('fade-out')
+            newEmailElement.style.display = 'none'
+        }, 300);
+    }
 }
 
 /*This function updates the contact  */
