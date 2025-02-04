@@ -1,0 +1,16 @@
+This repo provides code for a contacts app.
+Functionality provided:
+-retrieving all contacts from the database
+-retrieving more information about a certain contact upon clicking on that contact
+-deleting contact
+-deleting email from a contact
+-adding an email to a contact
+-updating contact first and last name
+-regex check on emails
+-cancelling changes to emails and name.
+PS: click on plus icon for new email input field to pop up. Hover next to the 
+input field and a minus icon should appear which allows users to remove the input
+field in case they don't want to add a new email anymore
+
+Front-end features:
+-Fade in and fade out animations
