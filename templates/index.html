@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../static/styles.css">
+        <title>Contact & Info</title>
+    </head>
+    <body>
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div id="title">        
+                <div id="contacts">Contacts</div>
+                <i class="fa-solid fa-circle-plus fa-2xl plus-icon-1" onclick="showForm()"></i>
+            </div>
+            <div id="contact-list"></div>
+        </div>
+
+        <!-- Information Section -->
+        <div id="info-section">
+            <div id="Home">
+                <h2>Information</h2>        
+                <div id="contact-info">
+                    <p>Select a contact to view details.</p>
+                </div>
+            </div>
+
+            <div id="details">
+                <div id="form-container">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <br>
+                        <input type="text" id="first-name" name="first-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <br>
+                        <input type="text" id="last-name" name="last-name">
+                    </div>
+                </div>
+
+                <div id="emails">
+                    Emails:
+                </div>
+                <div id="new-email">
+                    <i class="fa-solid fa-circle-plus fa-2xl plus-icon-2" onclick="ToggleInputField()"></i>
+                    <span> Add Email</span>
+                    <div class="form-group" id="form-group-3">
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="text" id="email" name="email">
+                        <i class="fa-solid fa-circle-minus fa-2xl hide-email" onclick="ToggleInputField()" ></i>                
+                    </div>
+                </div>
+
+            </div>
+            <div id="buttons">
+                <i id="delete" onclick="deleteSelectedContact()"
+                class="fa-solid fa-trash-can fa-2xl" style="color: #e31616;"></i>
+                <button id="cancel" onclick="reset()">Cancel</button>
+                <button id="save" onclick="updateContact()">Save</button>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-container" id="contact-form">
+                <p>Fill in the form to add a new contact.</p><br>
+                <input id='form-fn' type="text" placeholder="First Name"><br>
+                <input id='form-ln' type="text" placeholder="Last Name"><br>
+                <input id='form-email' type="email" placeholder="Your Email"><br>
+                <button onclick='addContact()' type="submit">Submit</button>
+            </div>
+        </div>
+
+        <script src="../static/index.js"></script>
+    </body>
+</html>

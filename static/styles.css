@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial;
+    display: flex;
+    height: 100vh;
+}
+
+.contact-section {
+    height: 100vh;
+    width: 20vw;
+    background-color: #d4e6f1;
+    position: relative;
+}
+
+#title
+{
+    display: flex;
+}
+
+#info-section {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color:#EAF2F8;
+}
+
+
+#contacts
+{
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-family:Arial;
+    font-weight: 200;
+    font-size: 32px;
+}
+
+.plus-icon-1 {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: #4599c7;
+    cursor: pointer;
+}
+
+.plus-icon-2 {
+    padding-right: 10px;
+    margin-top: 30px;
+    color: #4599c7;
+    cursor: pointer;
+}
+
+#contact-list {
+    margin-top: 20px;
+    display: block;
+}
+
+.contact-item {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    width: 100%;
+    cursor: pointer;
+    font-family: arial;
+}
+
+.contact-item:hover {
+    background-color: #4599c7;
+}
+
+.selected
+{
+    background-color: #4599c7;
+}
+
+.form-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.contact-container
+{
+    display: flex;
+}
+
+.form-container
+{
+    position:absolute;
+    top:10px;
+}
+.form-container input {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.form-container button {
+    padding: 8px 12px;
+    background-color: #4599c7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#buttons {
+    display: none;
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    right: 0px;
+    cursor: pointer;
+}
+
+#cancel, #save
+{
+    position: absolute;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    right: 0px;
+    cursor: pointer;
+}
+
+#save
+{
+    right: 50px;
+    border: none;
+    color: white;
+    background-color: #4599c7;
+}
+
+#cancel
+{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: white;
+    color: black;
+    right:190px;
+}
+
+#deleteSelected{
+    display: none;
+}
+
+
+#emails
+{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.email-container
+{
+    padding-top: 10px;
+    display: flex;
+}
+
+.email
+{
+    font-size: 15px;
+}
+
+.delete-email
+{
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    color: red;
+    margin-top: 10px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.delete-email:hover
+{
+    opacity: 1;
+}
+
+
+
+#details
+{
+    position: relative;
+    display: none;
+    background-color: #EAF2F8;
+}
+
+#form-container
+{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.form-group
+{
+    width: 50%;
+}
+
+#form-group-3
+{
+    width: 500px;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
+
+input
+{
+    width: 400px;
+    font-size: 22px;
+}
+
+.hide-email
+{
+    color: #ff0000; 
+    opacity: 0;
+}
+
+.hide-email:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out;
+}
